@@ -11,9 +11,13 @@
 	<link href="<c:url value="/resources/css/style.css"/>" rel="stylesheet" /> -->
 	<title>História</title>
 	<style>
-		 <%@ include file="../../resources/bootstrap/css/bootstrap.min.css" %>
+		 <%@ include file="../../resources/css/bootstrap.min.css" %>
 	     <%@ include file="../../resources/css/style.css" %>
 	</style>
+	<script> 
+		<%@ include file="../../resources/js/jquery-3.1.1.min.js" %>
+		<%@ include file="../../resources/js/bootstrap.js" %>
+	</script>	
 </head>
 <body>
      <nav class="navbar navbar-default">
@@ -55,7 +59,5 @@
 			<span class="text-muted">Projeto desenvolvido na disciplina de Laboratorio de Desenvolvimento de Software OO</span>
 		</div>
 	</div>
-	<script type="text/javascript" src="<c:url value="/resources/jquery/jquery-3.1.1.min.js"/> "> </script>
-	<script type="text/javascript" src="<c:url value="/resources/bootstrap/js/bootstrap.js"/> "> </script>
 </body>
 </html>
