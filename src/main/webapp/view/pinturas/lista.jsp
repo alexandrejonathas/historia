@@ -6,7 +6,7 @@
 <tags:template>
 	<jsp:attribute name="body">
 	
-		<h4>Lista de Pinturas</h4>
+		<h4 id="h">Lista de Pinturas</h4>
 		
 		<hr />
 		

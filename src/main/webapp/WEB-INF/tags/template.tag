@@ -7,9 +7,13 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap.min.css"/>">
-	<link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>" type="text/stylesheet">
+	<!--<link href="<c:url value="/resources/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet" type="text/css"  media="all" />
+	<link href="<c:url value="/resources/css/style.css"/>" rel="stylesheet" /> -->
 	<title>História</title>
+	<style>
+		 <%@ include file="../../resources/bootstrap/css/bootstrap.min.css" %>
+	     <%@ include file="../../resources/css/style.css" %>
+	</style>
 </head>
 <body>
      <nav class="navbar navbar-default">
@@ -27,13 +31,22 @@
            <ul class="nav navbar-nav navbar-right">
              <li class="active"><a href="<c:url value="/"/>">Home</a></li>
    	   		 <li><a href="<c:url value="/pinturas"/>">Pinturas</a></li>       		                     		
-             <li><a href="<c:url value="/esculturas"/>">Esculturas</a></li>                              	            
+             <li><a href="<c:url value="/esculturas"/>">Esculturas</a></li>
+             <li>${pageContext.request.contextPath}</li>                              	            
            </ul>
          </div><!--/.nav-collapse -->
        </div><!--/.container-fluid -->
      </nav>	
     
 	<div class="container">
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$("h1").click(function(){
+					alert("Teste");
+				})
+			})
+		</script>
 		<jsp:invoke fragment="body" />
 	</div>
 	
@@ -42,7 +55,7 @@
 			<span class="text-muted">Projeto desenvolvido na disciplina de Laboratorio de Desenvolvimento de Software OO</span>
 		</div>
 	</div>
-	<script type="text/javascript" src="<c:url value="/resources/jQuery/jquery-3.1.1.slim.min.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/resources/jQuery/jquery-3.1.1.min.js"/>"> </script>
 	<script type="text/javascript" src="<c:url value="/resources/bootstrap/js/bootstrap.js"/>"> </script>
 </body>
 </html>
