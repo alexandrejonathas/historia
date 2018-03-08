@@ -55,8 +55,7 @@
 			<span class="text-muted">Projeto desenvolvido na disciplina de Laboratorio de Desenvolvimento de Software OO</span>
 		</div>
 	</div>
-	
-	<script type="text/javascript" src="<c:url value="/resources/jQuery/jquery-3.1.1.min.js"/>"> </script>
-	<script type="text/javascript" src="<c:url value="/resources/bootstrap/js/bootstrap.js"/>"> </script>
+	<script type="text/javascript" src="<c:url value="/resources/jquery/jquery-3.1.1.min.js"/> "> </script>
+	<script type="text/javascript" src="<c:url value="/resources/bootstrap/js/bootstrap.js"/> "> </script>
 </body>
 </html>
