@@ -1,4 +1,4 @@
-package br.edu.adtalem.lds.historia.controller.pintura;
+package br.edu.adtalem.lds.historia.controller.escultura;
 
 import java.io.IOException;
 
@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.edu.adtalem.lds.historia.model.Arte;
-import br.edu.adtalem.lds.historia.model.Pintura;
+import br.edu.adtalem.lds.historia.model.Escultura;
 import br.edu.adtalem.lds.historia.model.data.StaticDB;
 
-@WebServlet("/pinturas/manutencao")
-public class ManutencaoPintura extends HttpServlet {
+@WebServlet("/esculturas/manutencao")
+public class ManutencaoEscultura extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
@@ -25,11 +25,11 @@ public class ManutencaoPintura extends HttpServlet {
 		String param = req.getParameter("id");
 		Arte arte = null;
 		if(param != null)
-			arte = db.getPintura(Long.valueOf(param));
+			arte = db.getEscultura(Long.valueOf(param));
 		else
-			arte = new Pintura();
-		req.setAttribute("pintura", arte);
-		RequestDispatcher rd = req.getRequestDispatcher("/view/pinturas/manutencao.jsp");
+			arte = new Escultura();
+		req.setAttribute("escultura", arte);
+		RequestDispatcher rd = req.getRequestDispatcher("/view/esculturas/manutencao.jsp");
 		rd.forward(req, resp);		
 		
 	}
@@ -50,20 +50,20 @@ public class ManutencaoPintura extends HttpServlet {
 		
 		Arte arte = null;
 		if(id == null) 
-			arte = new Pintura();
+			arte = new Escultura();
 		else
-			arte = db.getPintura(id);
+			arte = db.getEscultura(id);
 		
 		arte.setNome(nome);
 		arte.setAutor(autor);
 		arte.setAno(ano);
 		
 		if(id == null)
-			db.addPintura(arte);
+			db.addEscultura(arte);
 
-		req.setAttribute("pintura", arte);
+		req.setAttribute("escultura", arte);
 		req.setAttribute("msg", "Operação realizada com sucesso!");
-		RequestDispatcher rd = req.getRequestDispatcher("/view/pinturas/manutencao.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/view/esculturas/manutencao.jsp");
 		rd.forward(req, resp);		
 		
 	}

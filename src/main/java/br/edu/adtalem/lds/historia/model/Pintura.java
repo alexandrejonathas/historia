@@ -4,7 +4,7 @@ public class Pintura extends Arte {
 	
 	private String tecnica;
 	
-	private String localAssinatura;
+	private String assinatura;
 
 	public String getTecnica() {
 		return tecnica;
@@ -14,12 +14,12 @@ public class Pintura extends Arte {
 		this.tecnica = tecnica;
 	}
 
-	public String getLocalAssinatura() {
-		return localAssinatura;
+	public String getAssinatura() {
+		return assinatura;
 	}
 
-	public void setLocalAssinatura(String localAssinatura) {
-		this.localAssinatura = localAssinatura;
+	public void setAssinatura(String assinatura) {
+		this.assinatura = assinatura;
 	}
 	
 }

@@ -1,8 +1,9 @@
-#footer {	
+.copyright {	
   height: 60px;
   background-color: #f8f8f8;
 }  
 
-#footer div {
+.copyright-text {
 	margin-top: 23px;
+	text-align: center;
 }

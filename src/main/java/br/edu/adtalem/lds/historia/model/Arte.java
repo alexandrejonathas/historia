@@ -1,18 +1,18 @@
 package br.edu.adtalem.lds.historia.model;
 
 public abstract class Arte {
-	
+
 	private Long id;
-	
+
 	private String nome;
-	
-	private String autor;
-	
+
 	private Integer ano;
-	
-	private String dimensoes;
-	
+
+	private String dimensao;
+
 	private String image;
+
+	private String autor;
 
 	public Long getId() {
 		return id;
@@ -46,12 +46,12 @@ public abstract class Arte {
 		this.ano = ano;
 	}
 
-	public String getDimensoes() {
-		return dimensoes;
+	public String getDimensao() {
+		return dimensao;
 	}
 
-	public void setDimensoes(String dimensoes) {
-		this.dimensoes = dimensoes;
+	public void setDimensao(String dimensao) {
+		this.dimensao = dimensao;
 	}
 
 	public String getImage() {
@@ -61,5 +61,5 @@ public abstract class Arte {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	
+
 }

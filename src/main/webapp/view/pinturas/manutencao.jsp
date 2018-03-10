@@ -20,6 +20,18 @@
 		    <label for="ano">Ano:</label>
 		    <input type="text" class="form-control" id="ano" name="ano" value="${pintura.ano}"/>
 		  </div>
+		  <div class="form-group">
+		    <label for="dimensao">Dimensões:</label>
+		    <input type="text" class="form-control" id="dimensao" name="dimensao" value="${pintura.dimensao}"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="tecnica">Técnica:</label>
+		    <input type="text" class="form-control" id="tecnica" name="tecnica" value="${pintura.tecnica}"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="assinatura">Assinatura:</label>
+		    <input type="text" class="form-control" id="assinatura" name="assinatura" value="${pintura.assinatura}"/>
+		  </div>		  		  		  		  
 		  <button type="submit" class="btn btn-success">Salvar</button>		
 		</form>
 		

@@ -10,7 +10,7 @@
 		
 		<hr />
 		
-		<a href="<c:url value="/pinturas/manutencao"/>">Adicionar</a>
+		<a class="btn btn-success" href="<c:url value="/pinturas/manutencao"/>">Adicionar</a>
 		
 		<table class="table table-striped">
 			<thead>
@@ -29,7 +29,10 @@
 						<td>${p.nome}</td>
 						<td>${p.autor}</td>
 						<td>${p.ano}</td>
-						<td><a href="<c:url value="/pinturas/manutencao?id=${p.id}"/>">Editar</a></td>
+						<td>
+							<a class="btn btn-primary" href="<c:url value="/pinturas/manutencao?id=${p.id}"/>">Editar</a>
+							<a class="btn btn-danger" href="<c:url value="/pinturas/excluir?id=${p.id}"/>">Excluir</a>
+						</td>
 					</tr>
 				</c:forEach>
 			</tbody>

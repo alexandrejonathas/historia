@@ -12,19 +12,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.edu.adtalem.lds.historia.model.Arte;
 import br.edu.adtalem.lds.historia.model.Pintura;
-import br.edu.adtalem.lds.historia.model.data.PinturaStatic;
+import br.edu.adtalem.lds.historia.model.data.StaticDB;
 
 @WebServlet("/pinturas")
 public class ListaPintura extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	PinturaStatic db = PinturaStatic.getInstance();
+	StaticDB db = StaticDB.getInstance();
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		List<Arte> pinturas = db.getArteVisuals();
+		List<Arte> pinturas = db.getPinturas();
 		req.setAttribute("pinturas", pinturas);
 		
 		RequestDispatcher rd = req.getRequestDispatcher("/view/pinturas/lista.jsp");

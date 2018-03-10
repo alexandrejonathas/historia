@@ -6,7 +6,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<meta charset="utf-8">	  
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">	  
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--<link href="<c:url value="/resources/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet" type="text/css"  media="all" />
 	<link href="<c:url value="/resources/css/style.css"/>" rel="stylesheet" /> -->
 	<title>História</title>
@@ -35,29 +37,37 @@
            <ul class="nav navbar-nav navbar-right">
              <li class="active"><a href="<c:url value="/"/>">Home</a></li>
    	   		 <li><a href="<c:url value="/pinturas"/>">Pinturas</a></li>       		                     		
-             <li><a href="<c:url value="/esculturas"/>">Esculturas</a></li>
-             <li>${pageContext.request.contextPath}</li>                              	            
+             <li><a href="<c:url value="/esculturas"/>">Esculturas</a></li>                             	            
            </ul>
          </div><!--/.nav-collapse -->
        </div><!--/.container-fluid -->
      </nav>	
     
-	<div class="container">
-		<script type="text/javascript">
-			$(document).ready(function(){
-				
-				$("h1").click(function(){
-					alert("Teste");
+	<div class="wrapper" role="main">
+		<div class="container">
+			<div class="row">
+			<script type="text/javascript">
+				$(document).ready(function(){
+					
+					$("h1").click(function(){
+						alert("Teste");
+					})
 				})
-			})
-		</script>
-		<jsp:invoke fragment="body" />
-	</div>
-	
-	<div id="footer" class="footer navbar-fixed-bottom">
-		<div class="container text-center">
-			<span class="text-muted">Projeto desenvolvido na disciplina de Laboratorio de Desenvolvimento de Software OO</span>
+			</script>
+			<jsp:invoke fragment="body" />
+			</div>
 		</div>
 	</div>
+	<footer>
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="copyright-text">&copy; Sistema desenvolvido na cadeira de Laboratório de Desenvolvimento de Sistemas.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>		
 </body>
 </html>
