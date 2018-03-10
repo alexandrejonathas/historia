@@ -6,36 +6,37 @@
 <tags:template>
 	<jsp:attribute name="body">
 	
-		<h4 id="h">Lista de Pinturas</h4>
+		<h4 id="h" >Lista de Pinturas</h4>
 		
 		<hr />
 		
 		<a class="btn btn-success" href="<c:url value="/pinturas/manutencao"/>">Adicionar</a>
-		
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Nome</th>
-					<th>Autor</th>
-					<th>Ano</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${pinturas}" var="p">
+		<div class="table-responsive"> 
+			<table class="table table-striped">
+				<thead>
 					<tr>
-						<td>${p.id}</td>
-						<td>${p.nome}</td>
-						<td>${p.autor}</td>
-						<td>${p.ano}</td>
-						<td>
-							<a class="btn btn-primary" href="<c:url value="/pinturas/manutencao?id=${p.id}"/>">Editar</a>
-							<a class="btn btn-danger" href="<c:url value="/pinturas/excluir?id=${p.id}"/>">Excluir</a>
-						</td>
+						<th>ID</th>
+						<th>Nome</th>
+						<th>Autor</th>
+						<th>Ano</th>
+						<th class="col-md-2"></th>
 					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<c:forEach items="${pinturas}" var="p">
+						<tr>
+							<td>${p.id}</td>
+							<td>${p.nome}</td>
+							<td>${p.autor}</td>
+							<td>${p.ano}</td>
+							<td>
+								<a class="btn btn-primary" href="<c:url value="/pinturas/manutencao?id=${p.id}"/>">Editar</a>
+								<a class="btn btn-danger" href="<c:url value="/pinturas/excluir?id=${p.id}"/>">Excluir</a>
+							</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
 	</jsp:attribute>
 </tags:template>

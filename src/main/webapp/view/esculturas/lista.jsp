@@ -18,31 +18,32 @@
 		<hr />
 		
 		<a class="btn btn-success" href="<c:url value="/esculturas/manutencao"/>">Adicionar</a>		
-		
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Nome</th>
-					<th>Autor</th>
-					<th>Ano</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${esculturas}" var="e">
+		<div class="table-responsive"> 
+			<table class="table table-striped">
+				<thead>
 					<tr>
-						<td>${e.id}</td>
-						<td>${e.nome}</td>
-						<td>${e.autor}</td>
-						<td>${e.ano}</td>
-						<td>
-							<a class="btn btn-primary" href="<c:url value="/esculturas/manutencao?id=${e.id}"/>">Editar</a>
-							<a class="btn btn-danger" href="<c:url value="/esculturas/excluir?id=${e.id}"/>">Excluir</a>
-						</td>
+						<th>ID</th>
+						<th>Nome</th>
+						<th>Autor</th>
+						<th>Ano</th>
+						<th class="col-md-2"></th>
 					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<c:forEach items="${esculturas}" var="e">
+						<tr>
+							<td>${e.id}</td>
+							<td>${e.nome}</td>
+							<td>${e.autor}</td>
+							<td>${e.ano}</td>
+							<td>
+								<a class="btn btn-primary" href="<c:url value="/esculturas/manutencao?id=${e.id}"/>">Editar</a>
+								<a class="btn btn-danger" href="<c:url value="/esculturas/excluir?id=${e.id}"/>">Excluir</a>
+							</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
 	</jsp:attribute>
 </tags:template>
