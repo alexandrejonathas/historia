@@ -47,16 +47,23 @@ public class ManutencaoPintura extends HttpServlet {
 		String nome = req.getParameter("nome");
 		String autor = req.getParameter("autor");
 		Integer ano = Integer.valueOf(req.getParameter("ano"));
+		String dimensao = req.getParameter("dimensao");
+		String tecnica = req.getParameter("tecnica");
+		String assinatura = req.getParameter("assinatura");
 		
-		Arte arte = null;
+		
+		Pintura arte = null;
 		if(id == null) 
 			arte = new Pintura();
 		else
-			arte = db.getPintura(id);
+			arte = (Pintura) db.getPintura(id);
 		
 		arte.setNome(nome);
 		arte.setAutor(autor);
 		arte.setAno(ano);
+		arte.setDimensao(dimensao);
+		arte.setTecnica(tecnica);
+		arte.setAssinatura(assinatura);
 		
 		if(id == null)
 			db.addPintura(arte);

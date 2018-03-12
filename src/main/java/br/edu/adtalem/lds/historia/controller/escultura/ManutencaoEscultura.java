@@ -47,16 +47,23 @@ public class ManutencaoEscultura extends HttpServlet {
 		String nome = req.getParameter("nome");
 		String autor = req.getParameter("autor");
 		Integer ano = Integer.valueOf(req.getParameter("ano"));
+		String dimensao = req.getParameter("dimensao");
+		String longitude = req.getParameter("longitude");
+		String latitude = req.getParameter("latitude");
 		
-		Arte arte = null;
+		Escultura arte = null;
 		if(id == null) 
 			arte = new Escultura();
 		else
-			arte = db.getEscultura(id);
+			arte = (Escultura) db.getEscultura(id);
+		
 		
 		arte.setNome(nome);
 		arte.setAutor(autor);
 		arte.setAno(ano);
+		arte.setDimensao(dimensao);
+		arte.setLongitude(longitude);
+		arte.setLatitude(latitude);
 		
 		if(id == null)
 			db.addEscultura(arte);

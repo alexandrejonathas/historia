@@ -1,9 +1,9 @@
 package br.edu.adtalem.lds.historia.model;
 
 public class Pintura extends Arte {
-	
+
 	private String tecnica;
-	
+
 	private String assinatura;
 
 	public String getTecnica() {
@@ -21,5 +21,5 @@ public class Pintura extends Arte {
 	public void setAssinatura(String assinatura) {
 		this.assinatura = assinatura;
 	}
-	
+
 }
