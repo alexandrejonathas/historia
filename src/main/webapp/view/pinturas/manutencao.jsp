@@ -6,6 +6,13 @@
 <tags:template>
 	<jsp:attribute name="body">
 		
+		<c:if test="${msg != null}" >
+			<div class="alert alert-success alert-dismissible">
+			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			  ${msg}
+			</div>
+		</c:if>				
+		
 		<form class="form-horizontal" action="<c:url value="/pinturas/manutencao" />" method="post">
 		  <input type="hidden" name="id" value="${pintura.id}" />
 		  <div class="form-group">
@@ -21,17 +28,9 @@
 		    <input type="text" class="form-control" id="ano" name="ano" value="${pintura.ano}"/>
 		  </div>
 		  <div class="form-group">
-		    <label for="dimensao">Dimensões:</label>
-		    <input type="text" class="form-control" id="dimensao" name="dimensao" value="${pintura.dimensao}"/>
-		  </div>
-		  <div class="form-group">
-		    <label for="tecnica">Técnica:</label>
-		    <input type="text" class="form-control" id="tecnica" name="tecnica" value="${pintura.tecnica}"/>
-		  </div>
-		  <div class="form-group">
-		    <label for="assinatura">Assinatura:</label>
-		    <input type="text" class="form-control" id="assinatura" name="assinatura" value="${pintura.assinatura}"/>
-		  </div>		  		  		  		  
+		    <label for="valor">Valor:</label>
+		    <input type="text" class="form-control" id="valor" name="valor" value="${pintura.valor}"/>
+		  </div>	  		  		  		  
 		  <button type="submit" class="btn btn-success">Salvar</button>		
 		</form>
 		

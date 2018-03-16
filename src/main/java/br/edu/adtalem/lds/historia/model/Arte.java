@@ -8,10 +8,6 @@ public abstract class Arte {
 
 	private Integer ano;
 
-	private String dimensao;
-
-	private String image;
-
 	private String autor;
 
 	public Long getId() {
@@ -44,22 +40,6 @@ public abstract class Arte {
 
 	public void setAno(Integer ano) {
 		this.ano = ano;
-	}
-
-	public String getDimensao() {
-		return dimensao;
-	}
-
-	public void setDimensao(String dimensao) {
-		this.dimensao = dimensao;
-	}
-
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
 	}
 
 }

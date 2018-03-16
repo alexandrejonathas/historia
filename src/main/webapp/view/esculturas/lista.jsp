@@ -26,6 +26,8 @@
 						<th>Nome</th>
 						<th>Autor</th>
 						<th>Ano</th>
+						<th>Longitude</th>
+						<th>Latitude</th>
 						<th class="col-md-2"></th>
 					</tr>
 				</thead>
@@ -36,6 +38,8 @@
 							<td>${e.nome}</td>
 							<td>${e.autor}</td>
 							<td>${e.ano}</td>
+							<td>${e.longitude}</td>
+							<td>${e.latitude}</td>
 							<td>
 								<a class="btn btn-primary" href="<c:url value="/esculturas/manutencao?id=${e.id}"/>">Editar</a>
 								<a class="btn btn-danger" href="<c:url value="/esculturas/excluir?id=${e.id}"/>">Excluir</a>

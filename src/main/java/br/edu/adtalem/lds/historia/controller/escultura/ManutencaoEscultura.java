@@ -61,9 +61,8 @@ public class ManutencaoEscultura extends HttpServlet {
 		arte.setNome(nome);
 		arte.setAutor(autor);
 		arte.setAno(ano);
-		arte.setDimensao(dimensao);
-		arte.setLongitude(longitude);
-		arte.setLatitude(latitude);
+		arte.setLongitude(longitude == null ? 0 : Double.valueOf(longitude));
+		arte.setLatitude(latitude == null ? 0 : Double.valueOf(latitude));
 		
 		if(id == null)
 			db.addEscultura(arte);

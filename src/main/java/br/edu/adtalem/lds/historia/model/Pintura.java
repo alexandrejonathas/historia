@@ -1,25 +1,17 @@
 package br.edu.adtalem.lds.historia.model;
 
+import java.math.BigDecimal;
+
 public class Pintura extends Arte {
 
-	private String tecnica;
+	private BigDecimal valor;
 
-	private String assinatura;
-
-	public String getTecnica() {
-		return tecnica;
+	public BigDecimal getValor() {
+		return valor;
 	}
 
-	public void setTecnica(String tecnica) {
-		this.tecnica = tecnica;
-	}
-
-	public String getAssinatura() {
-		return assinatura;
-	}
-
-	public void setAssinatura(String assinatura) {
-		this.assinatura = assinatura;
+	public void setValor(BigDecimal valor) {
+		this.valor = valor;
 	}
 
 }

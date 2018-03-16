@@ -19,6 +19,7 @@
 						<th>Nome</th>
 						<th>Autor</th>
 						<th>Ano</th>
+						<th>Valor</th>
 						<th class="col-md-2"></th>
 					</tr>
 				</thead>
@@ -29,6 +30,7 @@
 							<td>${p.nome}</td>
 							<td>${p.autor}</td>
 							<td>${p.ano}</td>
+							<td>${p.valor}</td>
 							<td>
 								<a class="btn btn-primary" href="<c:url value="/pinturas/manutencao?id=${p.id}"/>">Editar</a>
 								<a class="btn btn-danger" href="<c:url value="/pinturas/excluir?id=${p.id}"/>">Excluir</a>

@@ -1,6 +1,7 @@
 package br.edu.adtalem.lds.historia.controller.pintura;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -47,10 +48,7 @@ public class ManutencaoPintura extends HttpServlet {
 		String nome = req.getParameter("nome");
 		String autor = req.getParameter("autor");
 		Integer ano = Integer.valueOf(req.getParameter("ano"));
-		String dimensao = req.getParameter("dimensao");
-		String tecnica = req.getParameter("tecnica");
-		String assinatura = req.getParameter("assinatura");
-		
+		String valor = req.getParameter("valor");		
 		
 		Pintura arte = null;
 		if(id == null) 
@@ -61,9 +59,7 @@ public class ManutencaoPintura extends HttpServlet {
 		arte.setNome(nome);
 		arte.setAutor(autor);
 		arte.setAno(ano);
-		arte.setDimensao(dimensao);
-		arte.setTecnica(tecnica);
-		arte.setAssinatura(assinatura);
+		arte.setValor(valor == null ? BigDecimal.ZERO : new BigDecimal(valor));
 		
 		if(id == null)
 			db.addPintura(arte);

@@ -22,11 +22,7 @@
 		  <div class="form-group">
 		    <label for="ano">Ano:</label>
 		    <input type="text" class="form-control" id="ano" name="ano" value="${escultura.ano}"/>
-		  </div>
-		  <div class="form-group">
-		    <label for="dimensao">Dimensões:</label>
-		    <input type="text" class="form-control" id="dimensao" name="dimensao" value="${escultura.dimensao}"/>
-		  </div>		  
+		  </div>	  
 		  <div class="form-group">
 		    <label for="longitude">Longitude:</label>
 		    <input type="text" class="form-control" id="longitude" name="longitude" value="${escultura.longitude}"/>
