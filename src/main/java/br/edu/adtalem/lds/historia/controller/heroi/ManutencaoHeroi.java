@@ -46,6 +46,7 @@ public class ManutencaoHeroi extends HttpServlet {
 		String nome = req.getParameter("nome");
 		String conhecidoPor = req.getParameter("conhecidoPor");
 		String habilidade = req.getParameter("habilidade");
+		String caracteristica = req.getParameter("caracteristica");
 				
 		Heroi heroi = null;
 		if(id == null) 
@@ -56,6 +57,7 @@ public class ManutencaoHeroi extends HttpServlet {
 		heroi.setNome(nome);
 		heroi.setConhecidoPor(conhecidoPor);
 		heroi.setHabilidade(habilidade);
+		heroi.setCaracteristica(caracteristica);
 		
 		
 		if(id == null)

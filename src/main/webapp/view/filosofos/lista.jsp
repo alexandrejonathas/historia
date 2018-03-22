@@ -19,6 +19,7 @@
 					<th>Nome</th>
 					<th>Nascimento</th>
 					<th>Morte</th>
+					<th>Caracteristica</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -29,9 +30,10 @@
 						<td>${p.nome}</td>
 						<td>${p.nascimento}</td>
 						<td>${p.morte}</td>
+						<td>${p.caracteristica}</td>
 						<td>
-								<a class="btn btn-primary" href="<c:url value="/filosofos/manutencao?id=${e.id}"/>">Editar</a>
-								<a class="btn btn-danger" href="<c:url value="/filosofos/excluir?id=${e.id}"/>">Excluir</a>
+								<a class="btn btn-primary" href="<c:url value="/filosofos/manutencao?id=${p.id}"/>">Editar</a>
+								<a class="btn btn-danger" href="<c:url value="/filosofos/remover?id=${p.id}"/>">Excluir</a>
 							</td>
 					</tr>
 				</c:forEach>

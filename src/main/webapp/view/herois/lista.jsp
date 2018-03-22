@@ -19,6 +19,7 @@
 					<th>Nome</th>
 					<th>Conhecido Por</th>
 					<th>Habilidade</th>
+					<th>Caracteristica</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -29,9 +30,10 @@
 						<td>${h.nome}</td>
 						<td>${h.conhecidoPor}</td>
 						<td>${h.habilidade}</td>
+						<td>${h.caracteristica}</td>
 						<td>
-								<a class="btn btn-primary" href="<c:url value="/herois/manutencao?id=${e.id}"/>">Editar</a>
-								<a class="btn btn-danger" href="<c:url value="/herois/excluir?id=${e.id}"/>">Excluir</a>
+								<a class="btn btn-primary" href="<c:url value="/herois/manutencao?id=${h.id}"/>">Editar</a>
+								<a class="btn btn-danger" href="<c:url value="/herois/remover?id=${h.id}"/>">Excluir</a>
 							</td>
 					</tr>
 				</c:forEach>

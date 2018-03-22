@@ -27,6 +27,12 @@
 		    <label for="habilidade">Habilidade:</label>
 		    <input type="text" class="form-control" id="habilidade" name="habilidade" value="${heroi.habilidade}"/>
 		  </div>
+		  <div class="form-group">
+		    <label for="caracteristica">Caracteristica:</label>
+		    <input type="text" class="form-control" id="caracteristica" name="caracteristica" value="${heroi.caracteristica}"/>
+		  </div>
+		  
+		  
 		  <button type="submit" class="btn btn-success">Salvar</button>		
 		</form>
 		

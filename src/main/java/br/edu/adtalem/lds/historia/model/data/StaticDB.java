@@ -173,4 +173,14 @@ public class StaticDB {
 		}
 		return filosofo;
 	}
+
+	public void removerHeroi(Pessoa pessoa) {
+		herois.remove(pessoa);
+		
+	}
+	
+	public void removerFilosofo(Pessoa pessoa) {
+		filosofos.remove(pessoa);
+		
+	}
 }

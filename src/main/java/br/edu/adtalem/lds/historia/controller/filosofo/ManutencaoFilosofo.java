@@ -48,6 +48,7 @@ public class ManutencaoFilosofo extends HttpServlet {
 		String conhecidoPor = req.getParameter("conhecidoPor");
 		Integer nascimento = Integer.valueOf(req.getParameter("nascimento"));
 		Integer morte = Integer.valueOf(req.getParameter("morte"));
+		String caracteristica = req.getParameter("caracteristica");
 				
 		Filosofo filosofo = null;
 		if(id == null) 
@@ -59,6 +60,7 @@ public class ManutencaoFilosofo extends HttpServlet {
 		filosofo.setConhecidoPor(conhecidoPor);
 		filosofo.setNascimento(nascimento);
 		filosofo.setMorte(morte);
+		filosofo.setCaracteristica(caracteristica);
 		
 		if(id == null)
 			db.addFilosofo(filosofo);
