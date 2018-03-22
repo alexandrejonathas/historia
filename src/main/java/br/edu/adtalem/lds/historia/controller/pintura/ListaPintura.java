@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.edu.adtalem.lds.historia.model.Arte;
-import br.edu.adtalem.lds.historia.model.Pintura;
 import br.edu.adtalem.lds.historia.model.data.StaticDB;
 
 @WebServlet("/pinturas")
@@ -26,6 +25,10 @@ public class ListaPintura extends HttpServlet {
 
 		List<Arte> pinturas = db.getPinturas();
 		req.setAttribute("pinturas", pinturas);
+		
+		String msg = (String)req.getSession().getAttribute("msg");
+		req.setAttribute("msg", msg);
+		req.getSession().removeAttribute("msg");		
 		
 		RequestDispatcher rd = req.getRequestDispatcher("/view/pinturas/lista.jsp");
 		rd.forward(req, resp);

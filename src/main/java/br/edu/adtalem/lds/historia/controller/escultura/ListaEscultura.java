@@ -26,6 +26,10 @@ public class ListaEscultura extends HttpServlet {
 		List<Arte> esculturas = db.getEsculturas();
 		req.setAttribute("esculturas", esculturas);
 		
+		String msg = (String)req.getSession().getAttribute("msg");
+		req.setAttribute("msg", msg);
+		req.getSession().removeAttribute("msg");
+		
 		RequestDispatcher rd = req.getRequestDispatcher("/view/esculturas/lista.jsp");
 		rd.forward(req, resp);
 	}

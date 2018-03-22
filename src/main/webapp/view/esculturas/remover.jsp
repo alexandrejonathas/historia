@@ -6,7 +6,7 @@
 <tags:template>
 	<jsp:attribute name="body">
 		
-		<h4 id="h" >Manutenção de Escultura</h4>
+		<h4 id="h" >Remover Escultura</h4>
 		
 		<hr />			
 		
@@ -17,29 +17,29 @@
 			</div>
 		</c:if>		
 		
-		<form class="form-horizontal" action="<c:url value="/esculturas/manutencao" />" method="post">
+		<form class="form-horizontal" action="<c:url value="/esculturas/remover" />" method="post">
 		  <input type="hidden" name="id" value="${escultura.id}" />
 		  <div class="form-group">
 		    <label for="nome">Nome:</label>
-		    <input type="text" class="form-control" id="nome" name="nome" value="${escultura.nome}" />
+		    <input type="text" disabled="disabled" class="form-control" id="nome" name="nome" value="${escultura.nome}" />
 		  </div>
 		  <div class="form-group">
 		    <label for="ano">Ano:</label>
-		    <input type="text" class="form-control" id="ano" name="ano" value="${escultura.ano}"/>
+		    <input type="text" disabled="disabled" class="form-control" id="ano" name="ano" value="${escultura.ano}"/>
 		  </div>	  
 		  <div class="form-group">
 		    <label for="longitude">Longitude:</label>
-		    <input type="text" class="form-control" id="longitude" name="longitude" value="${escultura.longitude}"/>
+		    <input type="text" disabled="disabled" class="form-control" id="longitude" name="longitude" value="${escultura.longitude}"/>
 		  </div>
 		  <div class="form-group">
 		    <label for="latitude">Latitude:</label>
-		    <input type="text" class="form-control" id="latitude" name="latitude" value="${escultura.latitude}"/>
+		    <input type="text" disabled="disabled" class="form-control" id="latitude" name="latitude" value="${escultura.latitude}"/>
 		  </div>		  		  		  
 		  <div class="form-group">
 		    <label for="autor">Autor:</label>
-		    <input type="text" class="form-control" id="autor" name="autor" value="${escultura.autor}" />
+		    <input type="text" disabled="disabled" class="form-control" id="autor" name="autor" value="${escultura.autor}" />
 		  </div>
-		  <button type="submit" class="btn btn-success">Salvar</button>		
+		  <button type="submit" class="btn btn-danger">Deletar</button>		
 		</form>
 		
 	</jsp:attribute>

@@ -6,9 +6,9 @@
 <tags:template>
 	<jsp:attribute name="body">
 		
-		<h4 id="h" >Manutenção de Pintura</h4>
+		<h4 id="h" >Remover Pintura</h4>
 		
-		<hr />			
+		<hr />		
 		
 		<c:if test="${msg != null}" >
 			<div class="alert alert-success alert-dismissible">
@@ -17,25 +17,25 @@
 			</div>
 		</c:if>				
 		
-		<form class="form-horizontal" action="<c:url value="/pinturas/manutencao" />" method="post">
+		<form class="form-horizontal" action="<c:url value="/pinturas/remover" />" method="post">
 		  <input type="hidden" name="id" value="${pintura.id}" />
 		  <div class="form-group">
 		    <label for="nome">Nome:</label>
-		    <input type="text" class="form-control" id="nome" name="nome" value="${pintura.nome}" />
+		    <input type="text" disabled="disabled" class="form-control" id="nome" name="nome" value="${pintura.nome}" />
 		  </div>
 		  <div class="form-group">
 		    <label for="autor">Autor:</label>
-		    <input type="text" class="form-control" id="autor" name="autor" value="${pintura.autor}" />
+		    <input type="text" disabled="disabled" class="form-control" id="autor" name="autor" value="${pintura.autor}" />
 		  </div>
 		  <div class="form-group">
 		    <label for="ano">Ano:</label>
-		    <input type="text" class="form-control" id="ano" name="ano" value="${pintura.ano}"/>
+		    <input type="text" disabled="disabled" class="form-control" id="ano" name="ano" value="${pintura.ano}"/>
 		  </div>
 		  <div class="form-group">
 		    <label for="valor">Valor:</label>
-		    <input type="text" class="form-control" id="valor" name="valor" value="${pintura.valor}"/>
+		    <input type="text" disabled="disabled" class="form-control" id="valor" name="valor" value="${pintura.valor}"/>
 		  </div>	  		  		  		  
-		  <button type="submit" class="btn btn-success">Salvar</button>		
+		  <button type="submit" class="btn btn-success">Remover</button>		
 		</form>
 		
 	</jsp:attribute>

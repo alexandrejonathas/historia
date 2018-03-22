@@ -8,14 +8,14 @@
 		
 		<h4>Lista de Esculturas</h4>
 
-		<c:if test="${msg} != null" >
+		<hr />
+
+		<c:if test="${msg != null }" >
 			<div class="alert alert-success alert-dismissible">
 			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			  ${msg}
 			</div>
 		</c:if>
-
-		<hr />
 		
 		<a class="btn btn-success" href="<c:url value="/esculturas/manutencao"/>">Adicionar</a>		
 		<div class="table-responsive"> 
@@ -42,7 +42,7 @@
 							<td>${e.latitude}</td>
 							<td>
 								<a class="btn btn-primary" href="<c:url value="/esculturas/manutencao?id=${e.id}"/>">Editar</a>
-								<a class="btn btn-danger" href="<c:url value="/esculturas/excluir?id=${e.id}"/>">Excluir</a>
+								<a class="btn btn-danger" href="<c:url value="/esculturas/remover?id=${e.id}"/>">Excluir</a>
 							</td>
 						</tr>
 					</c:forEach>

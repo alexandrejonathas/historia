@@ -47,7 +47,6 @@ public class ManutencaoEscultura extends HttpServlet {
 		String nome = req.getParameter("nome");
 		String autor = req.getParameter("autor");
 		Integer ano = Integer.valueOf(req.getParameter("ano"));
-		String dimensao = req.getParameter("dimensao");
 		String longitude = req.getParameter("longitude");
 		String latitude = req.getParameter("latitude");
 		

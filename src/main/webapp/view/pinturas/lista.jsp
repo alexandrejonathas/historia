@@ -10,6 +10,13 @@
 		
 		<hr />
 		
+		<c:if test="${msg != null }" >
+			<div class="alert alert-success alert-dismissible">
+			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			  ${msg}
+			</div>
+		</c:if>		
+		
 		<a class="btn btn-success" href="<c:url value="/pinturas/manutencao"/>">Adicionar</a>
 		<div class="table-responsive"> 
 			<table class="table table-striped">
@@ -33,7 +40,7 @@
 							<td>${p.valor}</td>
 							<td>
 								<a class="btn btn-primary" href="<c:url value="/pinturas/manutencao?id=${p.id}"/>">Editar</a>
-								<a class="btn btn-danger" href="<c:url value="/pinturas/excluir?id=${p.id}"/>">Excluir</a>
+								<a class="btn btn-danger" href="<c:url value="/pinturas/remover?id=${p.id}"/>">Excluir</a>
 							</td>
 						</tr>
 					</c:forEach>
