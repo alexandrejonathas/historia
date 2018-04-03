@@ -26,6 +26,10 @@ public class ListaFilosofos extends HttpServlet {
 		List<Pessoa> filosofos = db.getFilosofos();
 		req.setAttribute("filosofos", filosofos);
 
+		String msg = (String)req.getSession().getAttribute("msg");
+		req.setAttribute("msg", msg);
+		req.getSession().removeAttribute("msg");		
+		
 		RequestDispatcher rd = req.getRequestDispatcher("/view/filosofos/lista.jsp");
 		rd.forward(req, resp);
 

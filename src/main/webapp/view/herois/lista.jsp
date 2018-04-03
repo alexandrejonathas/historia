@@ -19,7 +19,7 @@
 					<th>Nome</th>
 					<th>Conhecido Por</th>
 					<th>Habilidade</th>
-					<th>Caracteristica</th>
+					<th>Característica</th>
 					<th></th>
 				</tr>
 			</thead>

@@ -56,6 +56,7 @@ public class StaticDB {
 			pessoa.setNome("Herói "+i);
 			pessoa.setConhecidoPor("Zenicleyton");
 			pessoa.setHabilidade("Rapido com espada");
+			pessoa.setCaracteristica("Senhor do reino dos mortos");
 		
 			herois.add(pessoa);		
 		}		
@@ -68,6 +69,7 @@ public class StaticDB {
 			pessoa.setConhecidoPor("Zenicleyton");
 			pessoa.setMorte(2018);
 			pessoa.setNascimento(2000);
+			pessoa.setCaracteristica("Fundador da filosofia ocidental");
 		
 			filosofos.add(pessoa);		
 		}		

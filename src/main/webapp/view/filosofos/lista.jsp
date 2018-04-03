@@ -10,7 +10,7 @@
 		
 		<hr />
 		
-		<a class="btn btn-success" href="<c:url value="/herois/manutencao"/>">Adicionar</a>	
+		<a class="btn btn-success" href="<c:url value="/filosofos/manutencao"/>">Adicionar</a>	
 		
 		<table class="table table-striped">
 			<thead>
@@ -19,7 +19,7 @@
 					<th>Nome</th>
 					<th>Nascimento</th>
 					<th>Morte</th>
-					<th>Caracteristica</th>
+					<th>Característica</th>
 					<th></th>
 				</tr>
 			</thead>

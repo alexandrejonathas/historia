@@ -32,7 +32,7 @@
 		    <input type="text" class="form-control" id="morte" name="morte" value="${filosofo.morte}"/>
 		  </div>
 		  <div class="form-group">
-		    <label for="caracteristica">Caracteristica:</label>
+		    <label for="caracteristica">Característica:</label>
 		    <input type="text" class="form-control" id="caracteristica" name="caracteristica" value="${filosofo.caracteristica}"/>
 		  </div>
 		  

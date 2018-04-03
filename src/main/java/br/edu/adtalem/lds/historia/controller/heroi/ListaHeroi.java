@@ -26,6 +26,10 @@ public class ListaHeroi extends HttpServlet {
 		List<Pessoa> herois = db.getHerois();
 		req.setAttribute("herois", herois);
 
+		String msg = (String)req.getSession().getAttribute("msg");
+		req.setAttribute("msg", msg);
+		req.getSession().removeAttribute("msg");		
+		
 		RequestDispatcher rd = req.getRequestDispatcher("/view/herois/lista.jsp");
 		rd.forward(req, resp);
 
