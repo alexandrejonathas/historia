@@ -39,11 +39,11 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="<c:url value="/"/>">Home</a></li>
-					<li><a href="<c:url value="/pinturas"/>">Pinturas</a></li>
-					<li><a href="<c:url value="/esculturas"/>">Esculturas</a></li>
-					<li><a href="<c:url value="/herois"/>">Herois</a></li>
-					<li><a href="<c:url value="/filosofos"/>">Filosofos</a></li>
+					<li class="active"><a href="<c:url value="/controller"/>">Home</a></li>
+					<li><a href="<c:url value="/controller?cmd=ListarPintura"/>">Pinturas</a></li>
+					<li><a href="<c:url value="/controller?cmd=ListarEscultura"/>">Esculturas</a></li>
+					<li><a href="<c:url value="/controller?cmd=ListarHeroi"/>">Herois</a></li>
+					<li><a href="<c:url value="/controller?cmd=ListarFilosofo"/>">Filosofos</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->

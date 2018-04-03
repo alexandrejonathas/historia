@@ -6,7 +6,7 @@
 <tags:template>
 	<jsp:attribute name="body">
 
-		<h4 id="h" >Manutenção de Escultura</h4>
+		<h4 id="h" >Cadastrar Escultura</h4>
 		
 		<hr />			
 		<c:if test="${msg != null}" >
@@ -16,8 +16,8 @@
 			</div>
 		</c:if>		
 		
-		<form class="form-horizontal" action="<c:url value="/esculturas/manutencao" />" method="post">
-		  <input type="hidden" name="id" value="${escultura.id}" />
+		<form class="form-horizontal" action="<c:url value="/?cmd=CadastrarEscultura" />" method="post">
+		  
 		  <div class="form-group">
 		    <label for="nome">Nome:</label>
 		    <input type="text" class="form-control" id="nome" name="nome" value="${escultura.nome}" />

@@ -17,7 +17,7 @@
 			</div>
 		</c:if>
 		
-		<a class="btn btn-success" href="<c:url value="/esculturas/manutencao"/>">Adicionar</a>		
+		<a class="btn btn-success" href="<c:url value="/?cmd=NovaEscultura"/>">Adicionar</a>		
 		<div class="table-responsive"> 
 			<table class="table table-striped">
 				<thead>
@@ -42,8 +42,11 @@
 							<td>${e.longitude}</td>
 							<td>${e.latitude}</td>
 							<td>
-								<a class="btn btn-primary" href="<c:url value="/esculturas/manutencao?id=${e.id}"/>">Editar</a>
-								<a class="btn btn-danger" href="<c:url value="/esculturas/remover?id=${e.id}"/>">Excluir</a>
+								<a class="btn btn-primary" href="<c:url value="/?cmd=EditarEscultura&id=${e.id}"/>">Editar</a>								
+								<form action="<c:url value="/?cmd=RemoverEscultura"/>" method="post">
+									<input type="hidden" name="id" value="${e.id}" />
+									<button class="btn btn-danger" type="submit">Excluir</button>
+								</form> 
 							</td>
 						</tr>
 					</c:forEach>
