@@ -48,6 +48,7 @@ public class ManutencaoPintura extends HttpServlet {
 		String nome = req.getParameter("nome");
 		String autor = req.getParameter("autor");
 		Integer ano = Integer.valueOf(req.getParameter("ano"));
+
 		String valor = req.getParameter("valor");		
 		
 		Pintura arte = null;
@@ -59,6 +60,7 @@ public class ManutencaoPintura extends HttpServlet {
 		arte.setNome(nome);
 		arte.setAutor(autor);
 		arte.setAno(ano);
+
 		arte.setValor(valor == null ? BigDecimal.ZERO : new BigDecimal(valor));
 		
 		if(id == null)

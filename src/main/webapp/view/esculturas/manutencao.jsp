@@ -5,11 +5,10 @@
 
 <tags:template>
 	<jsp:attribute name="body">
-		
+
 		<h4 id="h" >Manutenção de Escultura</h4>
 		
 		<hr />			
-		
 		<c:if test="${msg != null}" >
 			<div class="alert alert-success alert-dismissible">
 			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

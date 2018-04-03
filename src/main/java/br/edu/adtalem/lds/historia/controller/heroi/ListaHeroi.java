@@ -1,4 +1,4 @@
-package br.edu.adtalem.lds.historia.controller.pintura;
+package br.edu.adtalem.lds.historia.controller.heroi;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,28 +10,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.edu.adtalem.lds.historia.model.Arte;
+import br.edu.adtalem.lds.historia.model.Pessoa;
 import br.edu.adtalem.lds.historia.model.data.StaticDB;
 
-@WebServlet("/pinturas")
-public class ListaPintura extends HttpServlet {
+@WebServlet("/herois")
+public class ListaHeroi extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	StaticDB db = StaticDB.getInstance();
-	
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		List<Arte> pinturas = db.getPinturas();
-		req.setAttribute("pinturas", pinturas);		
+		List<Pessoa> herois = db.getHerois();
+		req.setAttribute("herois", herois);
 
 		String msg = (String)req.getSession().getAttribute("msg");
 		req.setAttribute("msg", msg);
 		req.getSession().removeAttribute("msg");		
 		
-		RequestDispatcher rd = req.getRequestDispatcher("/view/pinturas/lista.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/view/herois/lista.jsp");
 		rd.forward(req, resp);
+
 	}
-	
+
 }

@@ -9,14 +9,12 @@
 		<h4 id="h" >Lista de Pinturas</h4>
 		
 		<hr />
-		
 		<c:if test="${msg != null }" >
 			<div class="alert alert-success alert-dismissible">
 			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			  ${msg}
 			</div>
 		</c:if>		
-		
 		<a class="btn btn-success" href="<c:url value="/pinturas/manutencao"/>">Adicionar</a>
 		<div class="table-responsive"> 
 			<table class="table table-striped">

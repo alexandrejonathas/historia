@@ -38,6 +38,7 @@
 							<td>${e.nome}</td>
 							<td>${e.autor}</td>
 							<td>${e.ano}</td>
+
 							<td>${e.longitude}</td>
 							<td>${e.latitude}</td>
 							<td>

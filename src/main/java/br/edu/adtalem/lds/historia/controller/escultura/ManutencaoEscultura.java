@@ -47,6 +47,7 @@ public class ManutencaoEscultura extends HttpServlet {
 		String nome = req.getParameter("nome");
 		String autor = req.getParameter("autor");
 		Integer ano = Integer.valueOf(req.getParameter("ano"));
+
 		String longitude = req.getParameter("longitude");
 		String latitude = req.getParameter("latitude");
 		
@@ -54,14 +55,15 @@ public class ManutencaoEscultura extends HttpServlet {
 		if(id == null) 
 			arte = new Escultura();
 		else
-			arte = (Escultura) db.getEscultura(id);
-		
+			arte = (Escultura) db.getEscultura(id);		
 		
 		arte.setNome(nome);
 		arte.setAutor(autor);
 		arte.setAno(ano);
+
 		arte.setLongitude(longitude == null ? 0 : Double.valueOf(longitude));
 		arte.setLatitude(latitude == null ? 0 : Double.valueOf(latitude));
+
 		
 		if(id == null)
 			db.addEscultura(arte);

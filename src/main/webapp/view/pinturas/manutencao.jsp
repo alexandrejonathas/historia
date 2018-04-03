@@ -31,10 +31,12 @@
 		    <label for="ano">Ano:</label>
 		    <input type="text" class="form-control" id="ano" name="ano" value="${pintura.ano}"/>
 		  </div>
+		  
 		  <div class="form-group">
 		    <label for="valor">Valor:</label>
 		    <input type="text" class="form-control" id="valor" name="valor" value="${pintura.valor}"/>
 		  </div>	  		  		  		  
+
 		  <button type="submit" class="btn btn-success">Salvar</button>		
 		</form>
 		
