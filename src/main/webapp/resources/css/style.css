@@ -7,3 +7,16 @@
 	margin-top: 23px;
 	text-align: center;
 }
+
+.inline {
+	display: inline;
+}
+
+.inline a {
+	float: left;
+}
+
+.inline form {
+	float: left;
+	margin-left: 5px;
+}

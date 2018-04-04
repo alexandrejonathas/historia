@@ -38,7 +38,11 @@
 		    <label for="autor">Autor:</label>
 		    <input type="text" class="form-control" id="autor" name="autor" value="${escultura.autor}" />
 		  </div>
-		  <button type="submit" class="btn btn-success">Salvar</button>		
+		  <%
+		  	boolean achou = Boolean.parseBoolean((String)request.getAttribute("achou"));
+		  	if(achou){ %>
+		  	<button type="submit" class="btn btn-success" >Salvar</button>
+		  <%} %>		
 		</form>
 		
 	</jsp:attribute>

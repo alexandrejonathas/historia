@@ -8,21 +8,19 @@ import javax.servlet.http.HttpServletResponse;
 import br.edu.adtalem.lds.historia.model.Arte;
 import br.edu.adtalem.lds.historia.model.data.StaticDB;
 
-public class ListarEscultura implements IAction {
+public class PesquisarPintura implements IAction {
 
 	private StaticDB db = StaticDB.getInstance();
 	
 	@Override
 	public String execute(HttpServletRequest req, HttpServletResponse resp) {
-		List<Arte> esculturas = db.getEsculturas(null);
-		req.setAttribute("esculturas", esculturas);
+		String nome  = req.getParameter("nome");
 		
-		String msg = (String)req.getSession().getAttribute("msg");
-		req.setAttribute("msg", msg);
-		req.getSession().removeAttribute("msg");
+		List<Arte> pinturas = db.getPinturas(nome);
+		req.setAttribute("pinturas", pinturas);
 		
-		return "/view/esculturas/listar.jsp";
-		
+		req.setAttribute("msg", "Pesquisa concluída!");		
+		return "/view/pinturas/listar.jsp";
 	}
 
 }

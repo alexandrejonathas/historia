@@ -23,7 +23,7 @@ public class ListaEscultura extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		List<Arte> esculturas = db.getEsculturas();
+		List<Arte> esculturas = db.getEsculturas(null);
 		req.setAttribute("esculturas", esculturas);
 		
 		String msg = (String)req.getSession().getAttribute("msg");

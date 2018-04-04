@@ -7,7 +7,7 @@ import br.edu.adtalem.lds.historia.model.Arte;
 import br.edu.adtalem.lds.historia.model.Escultura;
 import br.edu.adtalem.lds.historia.model.data.StaticDB;
 
-public class EditarEscultura implements IAction {
+public class EditarPintura implements IAction {
 
 	private StaticDB db = StaticDB.getInstance();
 	
@@ -18,7 +18,7 @@ public class EditarEscultura implements IAction {
 		String msg = null;
 		boolean achou = true;
 		if(id != null) {
-			arte = db.getEscultura(Long.valueOf(id));
+			arte = db.getPintura(Long.valueOf(id));
 		}
 		else {
 			arte = new Escultura();
@@ -26,9 +26,9 @@ public class EditarEscultura implements IAction {
 			msg = "Não foi possivel realizar a ação de edição, tente cadastrar um novo registro!";
 		}
 		req.setAttribute("achou", achou);
-		req.setAttribute("escultura", arte);
+		req.setAttribute("pintura", arte);
 		req.setAttribute("msg", msg);
-		return "/view/esculturas/editar.jsp";	
+		return "/view/pinturas/editar.jsp";	
 	}
 
 }

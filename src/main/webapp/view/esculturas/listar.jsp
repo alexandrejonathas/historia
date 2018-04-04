@@ -9,13 +9,22 @@
 		<h4>Lista de Esculturas</h4>
 
 		<hr />
-
+		
 		<c:if test="${msg != null }" >
 			<div class="alert alert-success alert-dismissible">
 			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			  ${msg}
 			</div>
-		</c:if>
+		</c:if>		
+		
+		
+		<form action="<c:url value="/?cmd=PesquisarEscultura" />" method="post">
+		  <div class="form-group">
+		    <label for="nome">Nome:</label>
+		    <input type="text" class="form-control" id="nome" name="nome" />
+		  </div>
+		  <button type="submit" class="btn btn-info pull-right" >Pesquisar</button>			
+		</form>
 		
 		<a class="btn btn-success" href="<c:url value="/?cmd=NovaEscultura"/>">Adicionar</a>		
 		<div class="table-responsive"> 
@@ -41,7 +50,7 @@
 
 							<td>${e.longitude}</td>
 							<td>${e.latitude}</td>
-							<td>
+							<td class="inline">
 								<a class="btn btn-primary" href="<c:url value="/?cmd=EditarEscultura&id=${e.id}"/>">Editar</a>								
 								<form action="<c:url value="/?cmd=RemoverEscultura"/>" method="post">
 									<input type="hidden" name="id" value="${e.id}" />

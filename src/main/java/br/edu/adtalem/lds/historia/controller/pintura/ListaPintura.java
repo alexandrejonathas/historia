@@ -18,12 +18,12 @@ public class ListaPintura extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	StaticDB db = StaticDB.getInstance();
+	private StaticDB db = StaticDB.getInstance();
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		List<Arte> pinturas = db.getPinturas();
+		List<Arte> pinturas = db.getPinturas(null);
 		req.setAttribute("pinturas", pinturas);		
 
 		String msg = (String)req.getSession().getAttribute("msg");

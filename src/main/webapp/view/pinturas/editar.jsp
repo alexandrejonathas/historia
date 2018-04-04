@@ -6,7 +6,7 @@
 <tags:template>
 	<jsp:attribute name="body">
 		
-		<h4 id="h" >Manutenção de Pintura</h4>
+		<h4 id="h" >Editar Pintura</h4>
 		
 		<hr />			
 		
@@ -17,7 +17,7 @@
 			</div>
 		</c:if>				
 		
-		<form class="form-horizontal" action="<c:url value="/pinturas/manutencao" />" method="post">
+		<form class="form-horizontal" action="<c:url value="/?cmd=AlterarPintura" />" method="post">
 		  <input type="hidden" name="id" value="${pintura.id}" />
 		  <div class="form-group">
 		    <label for="nome">Nome:</label>

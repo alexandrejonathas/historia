@@ -9,8 +9,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<link href="<c:url value="/resources/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet" type="text/css"  media="all" />
-	<link href="<c:url value="/resources/css/style.css"/>" rel="stylesheet" /> -->
 <title>História</title>
 <style>
 <%@ include file="../../resources/css/bootstrap.min.css" %>
@@ -39,11 +37,11 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="<c:url value="/controller"/>">Home</a></li>
-					<li><a href="<c:url value="/controller?cmd=ListarPintura"/>">Pinturas</a></li>
-					<li><a href="<c:url value="/controller?cmd=ListarEscultura"/>">Esculturas</a></li>
-					<li><a href="<c:url value="/controller?cmd=ListarHeroi"/>">Herois</a></li>
-					<li><a href="<c:url value="/controller?cmd=ListarFilosofo"/>">Filosofos</a></li>
+					<li class="active"><a href="<c:url value="/"/>">Home</a></li>
+					<li><a href="<c:url value="/?cmd=ListarPintura"/>">Pinturas</a></li>
+					<li><a href="<c:url value="/?cmd=ListarEscultura"/>">Esculturas</a></li>
+					<li><a href="<c:url value="/?cmd=ListarHeroi"/>">Herois</a></li>
+					<li><a href="<c:url value="/?cmd=ListarFilosofo"/>">Filosofos</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->

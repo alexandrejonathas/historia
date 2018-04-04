@@ -116,8 +116,17 @@ public class StaticDB {
 		esculturas.remove(arte);
 	}	
 	
-	public List<Arte> getPinturas() {
-		return pinturas;
+	public List<Arte> getPinturas(String nome) {
+		if(nome == null || nome.isEmpty())
+			return pinturas;
+		
+		List<Arte> resultado = new ArrayList<>();
+		for(Arte a : pinturas) {
+			if(a.getNome().toLowerCase().contains(nome.toLowerCase())) {
+				resultado.add(a);
+			}
+		}
+		return resultado;
 	}
 	
 	public Arte getPintura(Long id) {
@@ -131,9 +140,19 @@ public class StaticDB {
 		return pintura;
 	}
 	
-	public List<Arte> getEsculturas() {
-		return esculturas;
-	}
+	public List<Arte> getEsculturas(String nome) {
+		
+		if(nome == null || nome.isEmpty())
+			return esculturas;
+		
+		List<Arte> resultado = new ArrayList<>();
+		for(Arte a : esculturas) {
+			if(a.getNome().toLowerCase().contains(nome.toLowerCase())) {
+				resultado.add(a);
+			}
+		}
+		return resultado;
+	}	
 	
 	public Arte getEscultura(Long id) {
 		Arte arte = null;
