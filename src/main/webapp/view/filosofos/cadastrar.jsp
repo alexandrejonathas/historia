@@ -11,31 +11,36 @@
 			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			  ${msg}
 			</div>
-		</c:if>		
+		</c:if>
 		
-		<form class="form-horizontal" action="<c:url value="/herois/manutencao" />" method="post">
-		  <input type="hidden" name="id" value="${heroi.id}" />
+		<form class="form-horizontal" action="<c:url value="/?cmd=CadastrarFilosofo" />" method="post">
+		  
 		  <div class="form-group">
 		    <label for="nome">Nome:</label>
-		    <input type="text" class="form-control" id="nome" name="nome" value="${heroi.nome}" />
+		    <input type="text" class="form-control" id="nome" name="nome" value="${filosofo.nome}" />
 		  </div>
 		  <div class="form-group">
 		    <label for="conhecidoPor">Conhecido Por:</label>
-		    <input type="text" class="form-control" id="conhecidoPor" name="conhecidoPor" value="${heroi.conhecidoPor}" />
+		    <input type="text" class="form-control" id="conhecidoPor" name="conhecidoPor" value="${filosofo.conhecidoPor}" />
 		  </div>
 		  <div class="form-group">
-		    <label for="habilidade">Habilidade:</label>
-		    <input type="text" class="form-control" id="habilidade" name="habilidade" value="${heroi.habilidade}"/>
+		    <label for="nascimento">Nascimento:</label>
+		    <input type="text" class="form-control" id="nascimento" name="nascimento" value="${filosofo.nascimento}"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="morte">Morte:</label>
+		    <input type="text" class="form-control" id="morte" name="morte" value="${filosofo.morte}"/>
 		  </div>
 		  <div class="form-group">
 		    <label for="caracteristica">Característica:</label>
-		    <input type="text" class="form-control" id="caracteristica" name="caracteristica" value="${heroi.caracteristica}"/>
+		    <input type="text" class="form-control" id="caracteristica" name="caracteristica" value="${filosofo.caracteristica}"/>
 		  </div>
 		  
 		  
 		  <button type="submit" class="btn btn-success">Salvar</button>		
+		  
+		  
 		</form>
-		
 		
 	</jsp:attribute>
 </tags:template>

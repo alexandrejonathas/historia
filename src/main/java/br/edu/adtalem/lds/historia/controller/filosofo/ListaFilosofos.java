@@ -23,7 +23,7 @@ public class ListaFilosofos extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		List<Pessoa> filosofos = (List<Pessoa>) db.getFilosofos();
+		List<Pessoa> filosofos = (List<Pessoa>) db.getFilosofos(null);
 		req.setAttribute("filosofos", filosofos);
 
 		String msg = (String)req.getSession().getAttribute("msg");

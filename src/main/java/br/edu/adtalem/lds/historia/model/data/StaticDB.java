@@ -165,8 +165,17 @@ public class StaticDB {
 		return arte;
 	}
 	
-	public List<Pessoa> getHerois() {
-		return herois;
+	public List<Pessoa> getHerois(String nome) {
+		if(nome == null || nome.isEmpty())
+			return herois;
+		
+		List<Pessoa> resultado = new ArrayList<>();
+		for(Pessoa p : herois) {
+			if(p.getNome().toLowerCase().contains(nome.toLowerCase())) {
+				resultado.add(p);
+			}
+		}
+		return resultado;
 	}
 	
 	public Pessoa getHeroi(Long id) {
@@ -180,8 +189,17 @@ public class StaticDB {
 		return heroi;
 	}
 	
-	public List<Pessoa> getFilosofos() {
-		return filosofos;
+	public List<Pessoa> getFilosofos(String nome) {
+		if(nome == null || nome.isEmpty())
+			return filosofos;
+		
+		List<Pessoa> resultado = new ArrayList<>();
+		for(Pessoa p : filosofos) {
+			if(p.getNome().toLowerCase().contains(nome.toLowerCase())) {
+				resultado.add(p);
+			}
+		}
+		return resultado;
 	}
 	
 	public Pessoa getFilosofo(Long id) {

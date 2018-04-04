@@ -11,36 +11,31 @@
 			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			  ${msg}
 			</div>
-		</c:if>
+		</c:if>		
 		
-		<form class="form-horizontal" action="<c:url value="/filosofos/manutencao" />" method="post">
-		  <input type="hidden" name="id" value="${filosofo.id}" />
+		<form class="form-horizontal" action="<c:url value="/?cmd=CadastrarHeroi" />" method="post">
+		 
 		  <div class="form-group">
 		    <label for="nome">Nome:</label>
-		    <input type="text" class="form-control" id="nome" name="nome" value="${filosofo.nome}" />
+		    <input type="text" class="form-control" id="nome" name="nome" value="${heroi.nome}" />
 		  </div>
 		  <div class="form-group">
 		    <label for="conhecidoPor">Conhecido Por:</label>
-		    <input type="text" class="form-control" id="conhecidoPor" name="conhecidoPor" value="${filosofo.conhecidoPor}" />
+		    <input type="text" class="form-control" id="conhecidoPor" name="conhecidoPor" value="${heroi.conhecidoPor}" />
 		  </div>
 		  <div class="form-group">
-		    <label for="nascimento">Nascimento:</label>
-		    <input type="text" class="form-control" id="nascimento" name="nascimento" value="${filosofo.nascimento}"/>
-		  </div>
-		  <div class="form-group">
-		    <label for="morte">Morte:</label>
-		    <input type="text" class="form-control" id="morte" name="morte" value="${filosofo.morte}"/>
+		    <label for="habilidade">Habilidade:</label>
+		    <input type="text" class="form-control" id="habilidade" name="habilidade" value="${heroi.habilidade}"/>
 		  </div>
 		  <div class="form-group">
 		    <label for="caracteristica">Característica:</label>
-		    <input type="text" class="form-control" id="caracteristica" name="caracteristica" value="${filosofo.caracteristica}"/>
+		    <input type="text" class="form-control" id="caracteristica" name="caracteristica" value="${heroi.caracteristica}"/>
 		  </div>
 		  
 		  
 		  <button type="submit" class="btn btn-success">Salvar</button>		
-		  
-		  
 		</form>
+		
 		
 	</jsp:attribute>
 </tags:template>
