@@ -19,7 +19,7 @@
 		</c:if>		
 		
 		
-		<form action="<c:url value="/?cmd=PesquisarFilosofo" />" method="post">
+		<form action="<c:url value="/?cmd=PesquisarHeroi" />" method="post">
 		  <div class="form-group">
 		    <label for="nome">Nome:</label>
 		    <input type="text" class="form-control" id="nome" name="nome" />

@@ -22,10 +22,10 @@ public class Controller extends HttpServlet {
 		IAction action;
 		try {
 			action = app.getAction();
-			String pagina = action.execute(request, response);
-			RequestDispatcher rd = request.getRequestDispatcher(pagina);
 			response.setContentType("text/html; charset=UTF-8");
 			response.setCharacterEncoding("UTF-8");
+			String pagina = action.execute(request, response);
+			RequestDispatcher rd = request.getRequestDispatcher(pagina);
 			rd.include(request, response);			
 		} catch (Exception e) {
 			e.printStackTrace();
