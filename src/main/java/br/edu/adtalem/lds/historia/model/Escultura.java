@@ -1,6 +1,13 @@
 package br.edu.adtalem.lds.historia.model;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("ESCULTURA")
 public class Escultura extends Arte {
+
+	private static final long serialVersionUID = 2652944236853549169L;
 
 	private Double longitude;
 

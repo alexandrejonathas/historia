@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	
+	<h:head>
+        <title><ui:insert name="title"></ui:insert> História</title>
+        <meta name="author" content="The Author"></meta>
+    </h:head>
+    <!-- Add 50px padding top to the body for the navbar -->
+    <h:body style="padding-top: 50px; padding-bottom: 20px;">
+        <b:navBar 
+        	brand-img="#{resource['images/historia.png']}"
+        	brand-img-style="max-width: 70px; margin-top: -8px;"
+        	brandHref="#" inverse="true" fixed="top" style="margin-bottom: 100px!important;">
+           
+            <b:navbarLinks>
+            	<b:navLink value="Esculturas" outcome="/esculturas" style="color: #FFFFFF; font-weight: bold;"></b:navLink>
+            </b:navbarLinks>
+           
+        </b:navBar>
+        <br />
+        <b:container>
+            <b:row>
+            	<ui:insert name="content"/>          		
+            </b:row>
+            <hr/>
+			<footer class="navbar-fixed-bottom text-center">
+				<b:column col-md="12">
+                	<p><h:outputText escape="false" value="&amp;copy;"/> Sistema desenvolvido na Cadeira de Laboratório de Desenvolvimento de Sistema</p>                				
+				</b:column>
+			</footer>
+        </b:container>        	
+	</h:body>	
+</html>

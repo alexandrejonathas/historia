@@ -1,5 +1,6 @@
 package br.edu.adtalem.lds.historia.model.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,8 +11,10 @@ import br.edu.adtalem.lds.historia.model.Heroi;
 import br.edu.adtalem.lds.historia.model.Pessoa;
 import br.edu.adtalem.lds.historia.model.Pintura;
 
-public class StaticDB {
+public class StaticDB implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+
 	private static volatile StaticDB instance;
 	
 	private static Long id = 0L;
@@ -26,7 +29,7 @@ public class StaticDB {
 	private Long idF = 0L;	
 	private List<Pessoa> filosofos = new ArrayList<>();
 	
-	private StaticDB() {
+	/*private StaticDB() {
 		for(int i = 0; i < 10; i++) {			
 			Arte arte = new Pintura();
 			id++;
@@ -83,7 +86,7 @@ public class StaticDB {
 			}
 		}
 		return instance;
-	}
+	}*/
 	
 	public void addPintura(Arte arte) {
 		id++;

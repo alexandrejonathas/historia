@@ -1,0 +1,103 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:o="http://omnifaces.org/ui"
+	template="/WEB-INF/template/template.xhtml">
+
+	<ui:define name="title">Home - </ui:define>
+
+	<ui:define name="content">
+
+		<b:column col-md="12">
+			<h:form id="frmPesquisa">
+				<p:messages />
+				<br />
+				<div>
+					<p:dataTable id="pinturasTable" value="#{pinturaBean.pinturas}"
+						var="pintura">
+						<f:facet name="header">
+							<p:commandButton value="Novo" icon="fa fa-fw fa-plus"
+								oncomplete="PF('dlgManutencao').show()" update=":frmManutencao" />
+						</f:facet>
+						<p:column headerText="Código">
+							<h:outputText value="#{pintura.id}" />
+						</p:column>
+						<p:column headerText="Nome">
+							<h:outputText value="#{pintura.nome}" />
+						</p:column>
+						<p:column headerText="Autor">
+							<h:outputText value="#{pintura.autor}" />
+						</p:column>
+						<p:column headerText="Ano">
+							<h:outputText value="#{pintura.ano}" />
+						</p:column>
+						<p:column headerText="Valor">
+							<h:outputText value="#{pintura.valor}" />
+						</p:column>
+						<p:column>
+							<p:commandButton icon="ui-icon-pencil" title="Editar"
+								oncomplete="PF('dlgManutencao').show()" update=":frmManutencao">
+								<f:setPropertyActionListener target="#{pinturaBean.pintura}"
+									value="#{pintura}" />
+							</p:commandButton>
+							<p:commandButton id="btExcluir" icon="ui-icon-trash"
+								title="Excluir" action="#{pinturaBean.remover}" process="@this"
+								update=":frmPesquisa">
+								<p:confirm header="Confirmação"
+									message="Tem certeza que deseja excluir o abastecimento?"
+									icon="ui-icon-alert" />
+								<f:setPropertyActionListener target="#{pinturaBean.pintura}"
+									value="#{pintura}" />
+							</p:commandButton>
+						</p:column>
+					</p:dataTable>
+					<p:confirmDialog global="true">
+						<p:commandButton value="Sim" type="button"
+							styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+						<p:commandButton value="Não" type="button"
+							styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+					</p:confirmDialog>
+				</div>
+			</h:form>
+			<h:form id="frmManutencao">
+				<p:dialog header="Manutenção de pintura" widgetVar="dlgManutencao"
+					resizable="false" draggable="false" responsive="true"
+					hideEffect="scale">
+					<div class="ui-fluid">
+						<div class="ui-g">
+							<div class="ui-g-12">
+								<div class="card card-w-title">
+									<p:panelGrid columns="2" layout="grid"
+										styleClass="ui-panelgrid-blank"
+										columnClasses="ui-grid-col-3, ui-grid-col-9">
+
+										<p:outputLabel value="Nome: " />
+										<p:inputText value="#{pinturaBean.pintura.nome}" />
+										<p:outputLabel value="Autor: " />
+										<p:inputText value="#{pinturaBean.pintura.autor}" />
+										<p:outputLabel value="Ano: " />
+										<p:inputText value="#{pinturaBean.pintura.ano}" />
+										<p:outputLabel value="Valor: " />
+										<p:inputText value="#{pinturaBean.pintura.valor}" />
+
+
+										<f:facet name="footer">
+											<p:commandButton icon="fa fa-fw fa-save" value="Salvar"
+												actionListener="#{pinturaBean.salvar}"
+												update=":frmPesquisa, :frmManutencao" />
+										</f:facet>
+									</p:panelGrid>
+								</div>
+								<!-- CARD -->
+							</div>
+						</div>
+					</div>
+
+				</p:dialog>
+			</h:form>
+		</b:column>
+
+	</ui:define>
+</ui:composition>

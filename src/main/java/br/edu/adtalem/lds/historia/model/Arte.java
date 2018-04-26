@@ -1,7 +1,29 @@
 package br.edu.adtalem.lds.historia.model;
 
-public abstract class Arte {
+import java.io.Serializable;
 
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="tbl_arte")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo_arte", discriminatorType = DiscriminatorType.STRING)
+public abstract class Arte implements Serializable {
+
+	private static final long serialVersionUID = -5111027003298408285L;
+
+	@Id
+	@GeneratedValue(generator = "increment")
+	@GenericGenerator(name = "increment", strategy = "increment")	
 	private Long id;
 
 	private String nome;
