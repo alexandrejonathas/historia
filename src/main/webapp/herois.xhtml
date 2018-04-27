@@ -6,7 +6,7 @@
 	xmlns:o="http://omnifaces.org/ui"
 	template="/WEB-INF/template/template.xhtml">
 
-	<ui:define name="title">Esculturas - </ui:define>
+	<ui:define name="title">Herois - </ui:define>
 
 	<ui:define name="content">
 
@@ -15,44 +15,41 @@
 				<p:messages />
 				<br />
 				<div>
-					<p:dataTable id="esculturasTable" value="#{esculturaBean.esculturas}"
-						var="escultura">
+					<p:dataTable id="heroisTable" value="#{heroiBean.herois}"
+						var="heroi">
 						<f:facet name="header">
 							<p:commandButton value="Novo" icon="fa fa-fw fa-plus"
 								oncomplete="PF('dlgManutencao').show()" update=":frmManutencao" />
 						</f:facet>
 						<p:column headerText="Código">
-							<h:outputText value="#{escultura.id}" />
+							<h:outputText value="#{heroi.id}" />
 						</p:column>
 						<p:column headerText="Nome">
-							<h:outputText value="#{escultura.nome}" />
+							<h:outputText value="#{heroi.nome}" />
 						</p:column>
-						<p:column headerText="Autor">
-							<h:outputText value="#{escultura.autor}" />
+						<p:column headerText="Conhecido por">
+							<h:outputText value="#{heroi.conhecidoPor}" />
 						</p:column>
-						<p:column headerText="Ano">
-							<h:outputText value="#{escultura.ano}" />
+						<p:column headerText="Característica">
+							<h:outputText value="#{heroi.caracteristica}" />
 						</p:column>
-						<p:column headerText="Longitude">
-							<h:outputText value="#{escultura.longitude}" />
-						</p:column>
-						<p:column headerText="Latitude">
-							<h:outputText value="#{escultura.latitude}" />
+						<p:column headerText="Habilidade">
+							<h:outputText value="#{heroi.habilidade}" />
 						</p:column>												
 						<p:column>
 							<p:commandButton icon="ui-icon-pencil" title="Editar"
 								oncomplete="PF('dlgManutencao').show()" update=":frmManutencao">
-								<f:setPropertyActionListener target="#{esculturaBean.escultura}"
-									value="#{escultura}" />
+								<f:setPropertyActionListener target="#{heroiBean.heroi}"
+									value="#{heroi}" />
 							</p:commandButton>
 							<p:commandButton id="btExcluir" icon="ui-icon-trash"
-								title="Excluir" action="#{esculturaBean.remover}" process="@this"
+								title="Excluir" action="#{heroiBean.remover}" process="@this"
 								update=":frmPesquisa">
 								<p:confirm header="Confirmação"
 									message="Tem certeza que deseja excluir o abastecimento?"
 									icon="ui-icon-alert" />
-								<f:setPropertyActionListener target="#{esculturaBean.escultura}"
-									value="#{escultura}" />
+								<f:setPropertyActionListener target="#{heroiBean.heroi}"
+									value="#{heroi}" />
 							</p:commandButton>
 						</p:column>
 					</p:dataTable>
@@ -65,7 +62,7 @@
 				</div>
 			</h:form>
 			<h:form id="frmManutencao">
-				<p:dialog header="Manutenção de Escultura" widgetVar="dlgManutencao"
+				<p:dialog header="Manutenção de Herói" widgetVar="dlgManutencao"
 					resizable="false" draggable="false" responsive="true"
 					hideEffect="scale">
 					<div class="ui-fluid">
@@ -76,20 +73,19 @@
 										styleClass="ui-panelgrid-blank"
 										columnClasses="ui-grid-col-3, ui-grid-col-9">
 
+
 										<p:outputLabel value="Nome: " />
-										<p:inputText value="#{esculturaBean.escultura.nome}" />
-										<p:outputLabel value="Autor: " />
-										<p:inputText value="#{esculturaBean.escultura.autor}" />
-										<p:outputLabel value="Ano: " />
-										<p:inputText value="#{esculturaBean.escultura.ano}" />
-										<p:outputLabel value="Longitude: " />
-										<p:inputText value="#{esculturaBean.escultura.longitude}" />
-										<p:outputLabel value="Latitude: " />
-										<p:inputText value="#{esculturaBean.escultura.latitude}" />
+										<p:inputText value="#{heroiBean.heroi.nome}" />
+										<p:outputLabel value="Conhecido por: " />
+										<p:inputText value="#{heroiBean.heroi.conhecidoPor}" />
+										<p:outputLabel value="Caracteristica: " />
+										<p:inputText value="#{heroiBean.heroi.caracteristica}" />
+										<p:outputLabel value="Habilidade: " />
+										<p:inputText value="#{heroiBean.heroi.habilidade}" />
 
 										<f:facet name="footer">
 											<p:commandButton icon="fa fa-fw fa-save" value="Salvar"
-												actionListener="#{esculturaBean.salvar}"
+												actionListener="#{heroiBean.salvar}"
 												update=":frmPesquisa, :frmManutencao" />
 										</f:facet>
 									</p:panelGrid>
