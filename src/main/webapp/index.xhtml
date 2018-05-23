@@ -12,6 +12,19 @@
 
 		<b:column col-md="12">
 			<h:form id="frmPesquisa">
+				<b:panel title="Pesquisar pinturas">
+					<b:panelGrid columns="2" columnClasses="col-md-4, col-md-8">
+					   <h:outputText value="Nome" />
+					   <p:inputText value="#{pinturaBean.filter.nome}" styleClass="col-md-12" />
+					   <h:outputText value="Autor" />
+					   <p:inputText value="#{pinturaBean.filter.autor}" styleClass="col-md-12" />
+					   
+					   <p:spacer/>
+					   
+					   <p:commandButton value="Pesquisar" action="#{pinturaBean.pesquisar}" update=":frmPesquisa" styleClass="col-md-12" />
+					   
+					</b:panelGrid>
+				</b:panel>
 				<p:messages />
 				<br />
 				<div>
@@ -37,12 +50,16 @@
 							<h:outputText value="#{pintura.valor}" />
 						</p:column>
 						<p:column>
-							<p:commandButton icon="ui-icon-pencil" title="Editar"
+							<p:commandButton
+								style="height: 30px!important;" 
+								icon="ui-icon-pencil" title="Editar"
 								oncomplete="PF('dlgManutencao').show()" update=":frmManutencao">
 								<f:setPropertyActionListener target="#{pinturaBean.pintura}"
 									value="#{pintura}" />
 							</p:commandButton>
-							<p:commandButton id="btExcluir" icon="ui-icon-trash"
+							<p:commandButton
+								style="height: 30px!important;" 
+								id="btExcluir" icon="ui-icon-trash"
 								title="Excluir" action="#{pinturaBean.remover}" process="@this"
 								update=":frmPesquisa">
 								<p:confirm header="Confirmação"

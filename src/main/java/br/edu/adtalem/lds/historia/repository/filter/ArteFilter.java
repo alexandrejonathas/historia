@@ -1,6 +1,10 @@
 package br.edu.adtalem.lds.historia.repository.filter;
 
-public class ArteFilter {
+import java.io.Serializable;
+
+public class ArteFilter implements Serializable {
+
+	private static final long serialVersionUID = 9018365953110248417L;
 
 	private String nome;
 	private String autor;

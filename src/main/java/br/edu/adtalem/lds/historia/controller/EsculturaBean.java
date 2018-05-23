@@ -33,6 +33,11 @@ public class EsculturaBean implements Serializable {
 		esculturas = repository.lista(filter);
 	}
 	
+	public void pesquisar() {
+		esculturas = repository.lista(filter);
+		FacesUtil.addInfoMessage("Pesquisa concluída!");
+	}
+	
 	public void salvar() {
 		escultura = repository.salvar(escultura);
 		boolean existe = false;

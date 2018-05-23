@@ -33,6 +33,11 @@ public class PinturaBean implements Serializable {
 		pinturas = repository.lista(filter);
 	}
 	
+	public void pesquisar() {
+		pinturas = repository.lista(filter);
+		FacesUtil.addInfoMessage("Pesquisa concluída!");
+	}
+	
 	public void salvar() {
 		pintura = repository.salvar(pintura);
 		boolean existe = false;
