@@ -1,0 +1,23 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:o="http://omnifaces.org/ui"
+	template="/WEB-INF/template/template.xhtml">
+
+	<ui:define name="title">Mapa - </ui:define>
+
+	<ui:define name="content">
+		
+    	<f:metadata>
+    		<o:viewParam name="escultura" value="#{mapaBean.escultura}"/>
+    	</f:metadata> 		
+		<h:form>							
+			<p:gmap id="mapa" center="-22.951911,-43.2126759" zoom="14" type="HYBRID" style="width:100%;height:400px" model="#{mapaBean.simpleModel}"  />
+			<p:poll widgetVar="poll" interval="3" listener="#{mapaBean.montarMaker()}" update="mapa" oncomplete="PF('poll').stop()"/>
+		</h:form>
+	</ui:define>
+</ui:composition>
+

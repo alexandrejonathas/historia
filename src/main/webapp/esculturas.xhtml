@@ -46,11 +46,11 @@
 						<p:column headerText="Ano">
 							<h:outputText value="#{escultura.ano}" />
 						</p:column>
-						<p:column headerText="Longitude">
-							<h:outputText value="#{escultura.longitude}" />
-						</p:column>
 						<p:column headerText="Latitude">
 							<h:outputText value="#{escultura.latitude}" />
+						</p:column>
+						<p:column headerText="Longitude">
+							<h:outputText value="#{escultura.longitude}" />
 						</p:column>												
 						<p:column>
 							<p:commandButton
@@ -72,6 +72,9 @@
 								<f:setPropertyActionListener target="#{esculturaBean.escultura}"
 									value="#{escultura}" />
 							</p:commandButton>
+							<p:button icon="fa fa-map-marker" title="Ver no mapa" outcome="/mapa" target="_blank">
+                 				<f:param name="escultura" value="#{escultura.id}"/>
+             				</p:button>
 						</p:column>
 					</p:dataTable>
 					<p:confirmDialog global="true">
@@ -100,10 +103,10 @@
 										<p:inputText value="#{esculturaBean.escultura.autor}" />
 										<p:outputLabel value="Ano: " />
 										<p:inputText value="#{esculturaBean.escultura.ano}" />
-										<p:outputLabel value="Longitude: " />
-										<p:inputText value="#{esculturaBean.escultura.longitude}" />
 										<p:outputLabel value="Latitude: " />
 										<p:inputText value="#{esculturaBean.escultura.latitude}" />
+										<p:outputLabel value="Longitude: " />
+										<p:inputText value="#{esculturaBean.escultura.longitude}" />
 
 										<f:facet name="footer">
 											<p:commandButton icon="fa fa-fw fa-save" value="Salvar"
