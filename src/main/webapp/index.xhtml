@@ -33,6 +33,8 @@
 						<f:facet name="header">
 							<p:commandButton value="Novo" icon="fa fa-fw fa-plus"
 								oncomplete="PF('dlgManutencao').show()" update=":frmManutencao" />
+							<p:button value="Ranking das pinturas" outcome="avaliacao.jsf" 
+								icon="fa fa-fw fa-money" target="_blank"/>	
 						</f:facet>
 						<p:column headerText="Código">
 							<h:outputText value="#{pintura.id}" />

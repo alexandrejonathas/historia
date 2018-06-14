@@ -50,6 +50,13 @@ public class PinturaRepository implements Serializable {
 		}		
 		return c.addOrder(Order.asc("nome")).list();
 	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Pintura> listaOrdenadaPorMaiorValor(){
+		Session session = manager.unwrap(Session.class);
+		Criteria c = session.createCriteria(Pintura.class);		
+		return c.addOrder(Order.desc("valor")).list();
+	}	
 
 	@Transactional
 	public void remover(Pintura pintura) {
