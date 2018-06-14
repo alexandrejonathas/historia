@@ -28,6 +28,7 @@ local.properties
 
 # Eclipse Core
 .project
+.tern-project
 
 # External tool builders
 .externalToolBuilders/
